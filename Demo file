@@ -1,0 +1,38 @@
+pipeline {
+ agent any
+
+stages {
+
+
+stage('clone source code') {
+steps {
+git 'https://github.com/akramdevopstrainer/maven-standalone-application.git'
+}
+}
+
+stage('software build using maven') {
+steps {
+echo 'Building using maven'
+}
+}
+
+stage('Testing using sanrqube') {
+steps {
+echo 'Testing using sanrqube'
+}
+}
+
+stage('Deploy using Ansible') {
+steps {
+echo 'Deploy using Ansible'
+}
+}
+
+stage('send confirmation email') {
+steps {
+echo 'send confirmation email'
+}
+}
+
+}
+}
